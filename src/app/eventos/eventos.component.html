@@ -1,0 +1,41 @@
+<div>
+  <h1>Parabéns!</h1>
+  <h4>Seu componente está sendo exibido em tela</h4>
+  <hr>
+  <h5>Como aparece o seu evento abaixo?</h5>
+
+  <div style="margin-top:30px" ng-bind='evento'>
+    Evento: {{ evento.name }}
+  </div>
+  <div>
+    Data: {{ evento.date }}
+  </div>
+  <div>
+    Hora: {{ evento.time }}
+  </div>
+  <div>
+    Endereço: {{ evento.location.address }}
+  </div>
+  <div>
+    Cidade: {{ evento.location.city }}
+  </div>
+  <div>
+    País: {{ evento.location.country }}
+  </div>
+
+  <h2>Eventos</h2>
+  <ul class="eventos">
+    <li *ngFor="let evento of eventos">
+      <p class="badge">{{evento?.name}}</p>
+      <p>{{evento?.date}}</p>
+      <p>{{evento?.time}}</p>
+      <div *ngIf="evento.location">
+        <p>{{evento.location?.address}}</p>
+        <p>{{evento.location?.city}}</p>
+        <p>{{evento.location?.country}}</p>
+      </div>
+      <span *ngIf="evento.onlineUrl">Evento Online</span>
+    </li>
+  </ul>
+
+</div>
