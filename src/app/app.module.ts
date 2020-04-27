@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { DatasComponent } from './datas/datas.component';
+import { EnderecoComponent } from './endereco/endereco.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventosComponent
+    EventosComponent,
+    DatasComponent,
+    EnderecoComponent
   ],
   imports: [
     BrowserModule
