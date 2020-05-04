@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-eventos',

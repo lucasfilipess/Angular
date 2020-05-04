@@ -1,0 +1,24 @@
+<div style="display: flex; flex-direction: column; justify-content: center;">
+  <ul>
+    <li><strong style="margin-right: 10px;">Id:</strong>{{ pessoa.id }}</li>
+    <li>
+      <strong style="margin-right: 10px;">Nome:</strong> {{ pessoa.name }}
+    </li>
+    <li>
+      <strong style="margin-right: 10px;">Idade:</strong> {{ pessoa.idade }}
+    </li>
+    <li>
+      <strong style="margin-right: 10px;">Cor dos Olhos:</strong>
+      {{ pessoa.corOlhos }}
+    </li>
+    <li>
+      <strong style="margin-right: 10px;">Sexo:</strong> {{ pessoa.sexo }}
+    </li>
+    <li>
+      <strong style="margin-right: 10px;">Email:</strong> {{ pessoa.email }}
+    </li>
+  </ul>
+  <button type="button" class="btn btn-primary" (click)="atualiza(pessoa.id)">
+    Alterar Dados
+  </button>
+</div>
