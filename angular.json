@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Aula1": {
+    "aula": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Aula1",
+            "outputPath": "dist/aula",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -62,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Aula1:build"
+            "browserTarget": "aula:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Aula1:build:production"
+              "browserTarget": "aula:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Aula1:build"
+            "browserTarget": "aula:build"
           }
         },
         "test": {
@@ -110,15 +111,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Aula1:serve"
+            "devServerTarget": "aula:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Aula1:serve:production"
+              "devServerTarget": "aula:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "Aula1"
+    }
+  },
+  "defaultProject": "aula"
 }

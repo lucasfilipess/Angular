@@ -1,25 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EventosComponent } from './eventos/eventos.component';
-import { DatasComponent } from './datas/datas.component';
-import { EnderecoComponent } from './endereco/endereco.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PessoasComponent } from './pessoas/pessoas.component';
-import { PessoasDetalheComponent } from './pessoas-detalhe/pessoas-detalhe.component';
-import { PessoasService } from './pessoas.service';
+import { NavComponent } from './nav/nav.component';
+import { UserComponent } from './user/user.component';
+import { PostComponent } from './post/post.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventosComponent,
-    DatasComponent,
-    EnderecoComponent,
     PessoasComponent,
-    PessoasDetalheComponent,
+    NavComponent,
+    UserComponent,
+    PostComponent,
+    CommentComponent
   ],
-  imports: [BrowserModule],
-  providers: [PessoasService],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
