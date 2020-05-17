@@ -1,1 +1,46 @@
-<p>nav works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand">Home</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <!-- <a class" ="nav-link" routerLink="users">Usuários</a> -->
+        <a
+          class="nav-link"
+          [ngClass]="[isActive === 1 ? 'active' : 'desable']"
+          (click)="handleActive(1)"
+          routerLink="users"
+          >Usuários</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [ngClass]="[isActive === 2 ? 'active' : 'desable']"
+          (click)="handleActive(2)"
+          routerLink="posts"
+          >Posts</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [ngClass]="[isActive === 3 ? 'active' : 'desable']"
+          (click)="handleActive(3)"
+          routerLink="comments"
+          >Comentários</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
